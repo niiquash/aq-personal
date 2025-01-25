@@ -4,24 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Ammon Quarshie" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Ammon Quarshie</title>
+    <script src="js/main.js" defer></script>
   </head>
   <body>
     <header class="header">
-      <span class="header__logo">AQ</span>
+      <a href="#home" class="header__logo">AQ</a>
       <nav>
         <ul class="header__nav--menu">
-          <li class="header__nav--item">About</li>
-          <li class="header__nav--item">Projects</li>
-          <li class="header__nav--item">Contact</li>
+          <li class="header__nav--item"><a href="#about">About</a></li>
+          <li class="header__nav--item"><a href="#projects">Projects</a></li>
+          <li class="header__nav--item"><a href="#contact">Contact</a></li>
         </ul>
-        <div class="hamburger"></div>
       </nav>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </header>
     <main class="main">
-      <section class="main__introduction">
+      <section id="home" class="main__introduction">
         <img
           class="main__introduction--image"
           src="img/man-portraint.jpg"
@@ -39,7 +49,7 @@
       </section>
 
       <!-- About Section -->
-      <section class="main__about">
+      <section id="about" class="main__about">
         <h2 class="main__about--heading">About me</h2>
         <div class="main__about--items-container">
           <div class="main__about--item">
@@ -51,58 +61,84 @@
               engineering - HTML, CSS, JavaScript, NodeJS, PHP.
             </p>
           </div>
+          <div>
             <img src="img/familysearch.png" alt="FamilySearch Logo" />
             <p>
-              Completed an internship as a web development intern at Family Search. 
-              Here, I received training in ReactJS, and contributed to a team project, 
-              which was a new feature on the FamilySearch website.
+              Completed an internship as a web development intern at Family
+              Search. Here, I received training in ReactJS, and contributed to a
+              team project, which was a new feature on the FamilySearch website.
             </p>
           </div>
+          <div>
             <img src="img/uc.png" alt="UC Logo" />
             <p>
-              Got a masters degree in Information Technology at the University of the Cumberlands. 
-              Course work included database design and development, android development for mobile, 
-              Introduction AI and ML & Data Science. 
+              Got a masters degree in Information Technology at the University
+              of the Cumberlands. Course work included database design and
+              development, android development for mobile, Introduction AI and
+              ML & Data Science.
             </p>
           </div>
-            <img src="img/microsoft.png" alt="Microsoft Logo from flaticon images" />
+          <div>
+            <img
+              src="img/microsoft.png"
+              alt="Microsoft Logo from flaticon images"
+            />
             <p>
-              Got a second internship at Microsoft and a software engineering intern. Completed an intern project using SwiftUI and Objective-C.
+              Got a second internship at Microsoft and a software engineering
+              intern. Completed an intern project using SwiftUI and Objective-C.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="main__projects">
+      <section id="projects" class="main__projects">
         <h2 class="main__projects--heading">Projects</h2>
         <div class="main__project--container">
-            <img src="" alt="project thumbnail">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ducimus dolor impedit dolores fugit quae repellat porro pariatur rem mollitia.</p>
+          <img src="" alt="project thumbnail" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+            ducimus dolor impedit dolores fugit quae repellat porro pariatur rem
+            mollitia.
+          </p>
         </div>
         <div class="main__project--container">
-            <img src="" alt="project thumbnail">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ducimus dolor impedit dolores fugit quae repellat porro pariatur rem mollitia.</p>
+          <img src="" alt="project thumbnail" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+            ducimus dolor impedit dolores fugit quae repellat porro pariatur rem
+            mollitia.
+          </p>
         </div>
         <div class="main__project--container">
-            <img src="" alt="project thumbnail">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ducimus dolor impedit dolores fugit quae repellat porro pariatur rem mollitia.</p>
+          <img src="" alt="project thumbnail" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+            ducimus dolor impedit dolores fugit quae repellat porro pariatur rem
+            mollitia.
+          </p>
         </div>
         <div class="main__project--container">
-            <img src="" alt="project thumbnail">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, ducimus dolor impedit dolores fugit quae repellat porro pariatur rem mollitia.</p>
+          <img src="" alt="project thumbnail" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+            ducimus dolor impedit dolores fugit quae repellat porro pariatur rem
+            mollitia.
+          </p>
         </div>
       </section>
 
-      <section class="main__contact">
+      <section id="contact" class="main__contact">
         <h2 class="main__contact--heading">Contact me</h2>
         <div class="main__contact--socials">
-            <a href="#"><img src="./img/linkedin.svg" alt=""></a>
-            <a href="#"><img src="./img/gmail.svg" alt=""></a>
-            <a href="#"><img src="./img/outlook.svg" alt=""></a>
-            <a href="#"><img src="./img/github.svg" alt=""></a>
+          <a href="#"><img src="./img/linkedin.svg" alt="" /></a>
+          <a href="#"><img src="./img/gmail.svg" alt="" /></a>
+          <a href="#"><img src="./img/outlook.svg" alt="" /></a>
+          <a href="#"><img src="./img/github.svg" alt="" /></a>
         </div>
       </section>
-
+      <a href="#home"
+        ><img class="back-to-top" src="img/arrow.svg" alt="arrow back to top"
+      /></a>
     </main>
   </body>
 </html>
