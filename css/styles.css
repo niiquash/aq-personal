@@ -7,6 +7,9 @@
 html,
 body {
   font-family: "Inter", sans-serif;
+}
+
+body {
   position: relative;
 }
 
@@ -188,9 +191,9 @@ html {
 .main__projects {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  width: inherit;
+  width: 100%;
 }
 
 .main__projects--heading {
@@ -253,6 +256,39 @@ html {
 
 .main__projects--container button a:hover {
   color: black;
+}
+
+/* Contact section */
+.main__contact {
+  width: 100%;
+}
+
+.main__contact--heading {
+  font-size: 3rem;
+  font-family: "Lobster", serif;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.main__contact--socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main__contact--socials img {
+  width: 50px;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+}
+
+.back-to-top img {
+  width: 50px;
 }
 
 /* Media Queries */
