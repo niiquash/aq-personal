@@ -104,12 +104,14 @@ html {
 
 /* Main */
 .main {
-  margin-top: 7rem;
+  /* margin-top: 2rem; */
+  max-width: 800px;
   padding: 2rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .main__introduction {
@@ -183,6 +185,75 @@ html {
 }
 
 /* Projects section */
+.main__projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: inherit;
+}
+
+.main__projects--heading {
+  font-size: 3rem;
+  font-family: "Lobster", serif;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.main__projects--container {
+  width: 450px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border: 0.05rem solid rgba(0, 0, 0, 0.09);
+  border-radius: 8px;
+  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.05);
+}
+
+.main__projects--container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 1rem;
+}
+
+.main__projects--container p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.main__projects--container button {
+  width: 100px;
+  height: 38px;
+  border: none;
+  border-radius: 4px;
+  background: black;
+  margin-right: 0.6rem;
+  transition: all 0.05s;
+}
+
+.main__projects--container button:hover {
+  background-color: whitesmoke;
+  border: 1px solid black;
+}
+
+.main__projects--container button a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1rem;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__projects--container button a:hover {
+  color: black;
+}
 
 /* Media Queries */
 @media (min-width: 758px) {
