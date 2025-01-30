@@ -334,6 +334,10 @@ html {
     display: none;
   }
 
+  .main__about--item {
+    flex-direction: row;
+  }
+
   .main__projects--container {
     flex-direction: row;
     flex-wrap: wrap;
