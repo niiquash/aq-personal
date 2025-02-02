@@ -7,6 +7,8 @@ const dots = document.querySelectorAll(".carousel__dot");
 const projectContainer = document.querySelector(
   ".main__projects--container-carousel"
 );
+const leftButton = document.querySelector(".left__button");
+const rightButton = document.querySelector(".right__button");
 let currentIndex = 0;
 
 const toggleShow = () => {
@@ -35,3 +37,15 @@ dots.forEach((dot, index) => {
     updateCarousel();
   });
 });
+
+leftButton.addEventListener("click", () => {
+  currentIndex = currentIndex > 0 ? currentIndex - 1 : projectItems.length - 1;
+  updateCarousel();
+});
+
+rightButton.addEventListener("click", () => {
+  currentIndex = currentIndex < projectItems.length - 1 ? currentIndex + 1 : 0;
+  updateCarousel();
+});
+
+updateCarousel();

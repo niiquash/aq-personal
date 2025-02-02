@@ -305,6 +305,48 @@ html {
   background-color: #333;
 }
 
+.left__button,
+.right__button {
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: all 0.1s ease-in;
+  position: absolute;
+  opacity: 0.1;
+  top: 40%;
+}
+
+.left__button {
+  left: 0.5rem;
+}
+
+.right__button {
+  right: 0.5rem;
+}
+
+.left__button:hover,
+.right__button:hover {
+  background-color: #ccc;
+  border: 1px solid #333;
+  color: #333;
+  opacity: 1;
+}
+
+.left__button:hover {
+  transform: translateX(-10%);
+}
+
+.right__button:hover {
+  transform: translateX(10%);
+}
+
 /* Contact section */
 .main__contact {
   min-height: 100vh;
