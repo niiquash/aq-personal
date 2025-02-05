@@ -10,6 +10,7 @@ const projectContainer = document.querySelector(
 const leftButton = document.querySelector(".left__button");
 const rightButton = document.querySelector(".right__button");
 let currentIndex = 0;
+let startX, currentX, differenceX;
 
 const toggleShow = () => {
   menu.classList.toggle("show");
@@ -46,6 +47,30 @@ leftButton.addEventListener("click", () => {
 rightButton.addEventListener("click", () => {
   currentIndex = currentIndex < projectItems.length - 1 ? currentIndex + 1 : 0;
   updateCarousel();
+});
+
+// Touch events for sliding functionality
+projectContainer.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+projectContainer.addEventListener("touchmove", (e) => {
+  currentX = e.touches[0].clientX;
+  differenceX = currentX - startX;
+});
+
+projectContainer.addEventListener("touchend", () => {
+  if (differenceX > 50) {
+    // swipe right action
+    currentIndex =
+      currentIndex > 0 ? currentIndex - 1 : projectItems.length - 1;
+  } else if (differenceX < -50) {
+    // swipe left action
+    currentIndex =
+      currentIndex < projectItems.length - 1 ? currentIndex + 1 : 0;
+  }
+  updateCarousel();
+  differenceX = 0;
 });
 
 updateCarousel();
